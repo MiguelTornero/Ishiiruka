@@ -182,7 +182,7 @@ static void ThrottleCallback(u64 last_time, s64 cyclesLate)
 
 	int diff = (u32)last_time - time;
 	const SConfig& config = SConfig::GetInstance();
-	bool frame_limiter = config.m_EmulationSpeed > 0.0f && !Core::GetIsThrottlerTempDisabled();
+	bool frame_limiter = config.m_EmulationSpeed > 0.0f && !Core::GetIsThrottlerTempDisabled(); // test
 	u32 next_event = GetTicksPerSecond() / 1000;
 	frame_limiter = false; // removing frame limiter
 	if (frame_limiter)
